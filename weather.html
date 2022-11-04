@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="weather.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+<center>
+	<div class="child">
+<h1>WEATHER</h1>
+<input type="text" id="userInput" placeholder="Enter city name">
+<button id="get-btn">Get Weather</button>
+</div>
+<br>
+<img src="" id="icon">
+<h1 id="city"></h1>
+<h2 id="description"></h2>
+<h3 id="temperature"></h3>
+</center>
+</div>
+
+  <script type="text/javascript">
+	var userInput = document.getElementById("userInput");
+	var btn = document.getElementById("get-btn");
+	var icon = document.getElementById("icon");
+	var city = document.getElementById("city");
+	var description = document.getElementById("description");
+	var temperature = document.getElementById("temperature");
+
+	const API_KEY = "1e6efa395280560ebd5498c4967cbac0";
+    const BASE_URL= "https://api.openweathermap.org/data/2.5/weather"
+
+    btn.addEventListener("click", function() {
+    fetch(BASE_URL + "?appid=" + API_KEY + "&q=" + userInput.value)
+    .then(response => response.json())
+    .then(data => {
+
+        
+        icon.src = "http://openweathermap.org/img/w/" + data["weather"][0]["icon"] + ".png";
+    	city.innerHTML = data["name"];
+    	description.innerHTML = data["weather"][0]["description"];
+    	temperature.innerHTML = Math.floor(data["main"]["temp"] - 273.15);
+    	console.log("data");
+
+    })
+
+    });
+
+  </script>
+
+</body>
+</html>

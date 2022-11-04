@@ -1,0 +1,60 @@
+body {
+	background-image: url(https://wallpaperaccess.com/full/1540010.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.child {
+
+}
+input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 80px;
+	border-radius: 30px;
+	border-color: white;
+	background-color: whitesmoke;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+button {
+	margin: 50px;
+	padding: 12px 30px;
+	background-color: whitesmoke;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	color: grey;
+    border-radius: 30px;
+    border-color: #CCCCFF;
+}
+img {
+	margin: -20px;
+    width: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
